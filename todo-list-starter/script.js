@@ -20,27 +20,6 @@ function updateTodoList() {
   });
 }
 
-function moveUp(index) {
-    let newIndex = index + 1;
-    console.log(newIndex);
-    moveUp(newIndex);
-    
- 
-
-    // let taskIndex = document.getElementById("new-task-text");
-    // let newIndex = taskIndex + index;
-    // taskIndex.innerText = newIndex;
-    // console.log(newIndex);
-}
-
-// let numberElement = document.getElementById("number");
-// let number = numberElement.innerText;
-// number = parseInt(number) + step;
-// numberElement.innerText = number;
-// console.log(number);
-
-
-
 function createNewTodoItemElement(task, index) {
   let newTodoTaskTextElement = document.createElement("p");
   newTodoTaskTextElement.innerText = task;
@@ -84,5 +63,13 @@ function toggleComplete(index) {
   }
   updateTodoList();
 }
+
+function moveUp(index) {
+    let newIndex = index + 1;
+    index = newIndex;
+    console.log(todoTaskText);
+    updateTodoList();
+}
+
 
 updateTodoList();
